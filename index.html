@@ -130,7 +130,7 @@
           </p>
           <div class="hero-buttons d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start">
             <a href="#courses" class="btn btn-primary btn-lg me-sm-3 mb-3 mb-sm-0">🚀 Explore Courses</a>
-            <a id="join-btn" class="btn btn-outline-light btn-lg">Join Now</a>
+            <a  class="join-btn btn btn-outline-light btn-lg">Join Now</a>
           </div>
         </div>
 
@@ -156,12 +156,16 @@
 </div>
 
 <script>
-  // When "Join Now" button is clicked, show the form
-  document.getElementById("join-btn").addEventListener("click", function (e) {
+ // Handle multiple "Join Now" buttons
+document.querySelectorAll(".join-btn").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
     e.preventDefault();
-    document.getElementById("form-container").style.display = "block";
-    document.getElementById("join-btn").scrollIntoView({ behavior: "smooth" });
+    const formContainer = document.getElementById("form-container");
+    formContainer.style.display = "block";
+    formContainer.scrollIntoView({ behavior: "smooth" });
   });
+});
+
 
   // (Optional) Auto redirect after form submission
   window.addEventListener("message", (event) => {
@@ -174,7 +178,6 @@
     <div class="hero-overlay"></div>
   </section>
 
-  <!-- Why Choose Us -->
   <!-- WHY CHOOSE US -->
   <section id="why" class="why-section py-5">
     <div class="container text-center">
@@ -257,7 +260,7 @@
               Learn front-end & back-end — HTML, CSS, React, Node.js, MongoDB.
               Build 3+ real projects for your portfolio.
             </p>
-            <a id="join-btn" class="btn-gradient mt-3">Join Now</a>
+            <a class="join-btn btn-gradient mt-3">Join Now</a>
           </div>
         </div>
 
@@ -273,7 +276,7 @@
               Master Python for automation, data analysis, and API handling.
               Ideal for both beginners and working professionals.
             </p>
-            <a id="join-btn" class="btn-gradient mt-3">Join Now</a>
+            <a  class="join-btn btn-gradient mt-3">Join Now</a>
           </div>
         </div>
 
@@ -289,7 +292,7 @@
               Build a winning resume, strengthen your LinkedIn, and prepare
               with mock interviews to get hired faster.
             </p>
-            <a id="join-btn" class="btn-gradient mt-3">Join Now</a>
+            <a class="join-btn btn-gradient mt-3">Join Now</a>
           </div>
         </div>
       </div>
@@ -361,7 +364,7 @@
         Join <strong>RorzCode IT</strong> and start building your future
         today.
       </p>
-      <a id="join-btn" class="btn-cta mt-3">Get Started</a>
+      <a  class="join-btn btn-cta mt-3">Get Started</a>
     </div>
   </section>
 
@@ -623,6 +626,7 @@
 
 
 </html>
+
 
 
 
